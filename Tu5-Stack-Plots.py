@@ -7,6 +7,7 @@ eating = [2, 3, 4, 3, 2]
 working = [7, 8, 7, 2, 2]
 playing = [8, 5, 7, 8, 13]
 
+# do the blank plot for the labels
 
 plt.plot([], [], color='m', label='Sleeping', linewidth=5)
 plt.plot([], [], color='c', label='Eating', linewidth=5)
