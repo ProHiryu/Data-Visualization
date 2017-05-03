@@ -87,6 +87,7 @@ def graph_data(stock):
 # Hard coded text
 ##    ax1.text(date[10], closep[1],'Text Example', fontdict=font_dict)
 
+
     #
     # plt.legend()
     plt.subplots_adjust(left=0.11, bottom=0.24, right=0.90,
