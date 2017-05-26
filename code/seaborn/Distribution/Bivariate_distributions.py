@@ -19,4 +19,15 @@ with sns.axes_style("white"):
 # Kernel density estimation
 sns.jointplot(x="x", y="y", data=df, kind="kde");
 
+# use 2-dmensional kde to perform 3-d kde
+f, ax = plt.subplots(figsize=(6, 6))
+sns.kdeplot(df.x, df.y, ax=ax)
+sns.rugplot(df.x, color="g", ax=ax)
+sns.rugplot(df.y, vertical=True, ax=ax);
+
+# draw kde like a planet dust
+f, ax = plt.subplots(figsize=(6, 6))
+cmap = sns.cubehelix_palette(as_cmap=True, dark=0, light=1, reverse=True)
+sns.kdeplot(df.x, df.y, cmap=cmap, n_levels=60, shade=True);
+
 sns.plt.show()
