@@ -30,4 +30,10 @@ f, ax = plt.subplots(figsize=(6, 6))
 cmap = sns.cubehelix_palette(as_cmap=True, dark=0, light=1, reverse=True)
 sns.kdeplot(df.x, df.y, cmap=cmap, n_levels=60, shade=True);
 
+# add more layers or to tweak other aspects of the visualization
+g = sns.jointplot(x="x", y="y", data=df, kind="kde", color="m")
+g.plot_joint(plt.scatter, c="w", s=30, linewidth=1, marker="+")
+g.ax_joint.collections[0].set_alpha(0)
+g.set_axis_labels("$X$", "$Y$");
+
 sns.plt.show()
