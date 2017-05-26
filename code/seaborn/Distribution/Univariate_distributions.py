@@ -20,14 +20,16 @@ sns.distplot(x, hist=False, rug=True);
 # the width of each hist,bins grows,the width get down
 sns.distplot(x, bins=20, kde=False, rug=True);
 
-
+# shade is the shade
 sns.kdeplot(x, shade=True);
 
+# bandwidth: how tightly the estimation is fit to the data
 sns.kdeplot(x)
 sns.kdeplot(x, bw=.2, label="bw: 0.2")
 sns.kdeplot(x, bw=2, label="bw: 2")
 plt.legend();
 
+# you can use for every fits
 sns.distplot(x, kde=False, fit=stats.gamma);
 
 sns.plt.show()
