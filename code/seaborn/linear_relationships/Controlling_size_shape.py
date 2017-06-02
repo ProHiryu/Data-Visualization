@@ -10,7 +10,7 @@ np.random.seed(sum(map(ord, "regression")))
 tips = sns.load_dataset("tips")
 anscombe = sns.load_dataset("anscombe")
 
-
+# can reshape the size of graph
 f, ax = plt.subplots(figsize=(5, 6))
 sns.regplot(x="total_bill", y="tip", data=tips, ax=ax);
 
