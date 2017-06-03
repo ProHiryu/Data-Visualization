@@ -24,3 +24,14 @@ sns.violinplot(x="total_bill", y="day", hue="time", data=tips,
 
 # split boxplot into two part count on "sex"(comparance of the two pair data)
 sns.violinplot(x="day", y="total_bill", hue="sex", data=tips, split=True);
+
+# inner show each individual observation instead of the summary boxplot values(palette is the color_codes)
+sns.violinplot(x="day", y="total_bill", hue="sex", data=tips,
+               split=True, inner="stick", palette="Set3");
+
+# combine swarmplot with violinplot or boxplot
+sns.violinplot(x="day", y="total_bill", data=tips, inner=None)
+sns.swarmplot(x="day", y="total_bill", data=tips, color="w", alpha=.5);
+
+
+sns.plt.show()
