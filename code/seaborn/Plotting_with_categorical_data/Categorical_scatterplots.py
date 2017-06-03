@@ -19,3 +19,12 @@ sns.stripplot(x="day", y="total_bill", data=tips, jitter=True);
 
 # to avoid overlap
 sns.swarmplot(x="day", y="total_bill", data=tips);
+
+# add a nested categorical variable with the hue parameter
+sns.swarmplot(x="day", y="total_bill", hue="sex", data=tips);
+
+# change x and y (use orient[orient = ['v','h']] to set the orientation)
+sns.swarmplot(x="total_bill", y="day", hue="time", data=tips);
+
+
+sns.plt.show()
