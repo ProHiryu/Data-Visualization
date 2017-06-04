@@ -20,4 +20,12 @@ sns.countplot(x="deck", data=titanic, palette="Greens_d");
 # use hue
 sns.countplot(y="deck", hue="class", data=titanic, palette="Greens_d");
 
+# pointplot is also for the mean of the data in different categories
+sns.pointplot(x="sex", y="survived", hue="class", data=titanic);
+
+# set all the distributes
+sns.pointplot(x="class", y="survived", hue="sex", data=titanic,
+              palette={"male": "g", "female": "m"},
+              markers=["^", "o"], linestyles=["-", "--"]);
+
 sns.plt.show()
