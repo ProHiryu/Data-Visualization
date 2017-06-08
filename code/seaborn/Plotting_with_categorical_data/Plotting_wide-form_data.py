@@ -17,3 +17,9 @@ sns.boxplot(data=iris, orient="h");
 
 # accept pandas and numpy
 sns.violinplot(x=iris.species, y=iris.sepal_length);
+
+# control the size of the graph
+f, ax = plt.subplots(figsize=(7, 3))
+sns.countplot(y="deck", data=titanic, color="c");
+
+sns.plt.show()
