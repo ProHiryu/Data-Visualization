@@ -20,8 +20,11 @@ sns.factorplot(x="day", y="total_bill", hue="smoker",
 sns.factorplot(x="time", y="total_bill", hue="smoker",
                col="day", data=tips, kind="box", size=4, aspect=.5);
 
+
 g = sns.PairGrid(tips,
                  x_vars=["smoker", "time", "sex"],
                  y_vars=["total_bill", "tip"],
                  aspect=.75, size=3.5)
 g.map(sns.violinplot, palette="pastel");
+
+sns.plt.show()
